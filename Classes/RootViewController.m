@@ -133,23 +133,26 @@
 
 // Customize the number of sections in the table view.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4;
+    return 5;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
 	
 	switch (section) {
 		case 0:
-			return @"2010-12-27";
+			return @"Wednesday";
 			break;
 		case 1:
-			return @"2010-12-28";
+			return @"Thursday";
 			break;
 		case 2:
-			return @"2010-12-29";
+			return @"Friday";
 			break;
 		case 3:
-			return @"2010-12-30";
+			return @"Saturday";
+			break;
+		case 4:
+			return @"Sunday";
 			break;
 	}
 	return @"";

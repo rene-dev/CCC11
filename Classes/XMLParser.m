@@ -109,6 +109,9 @@
 		if ([elementName isEqualToString:@"track"]){
 			[aEvent setValue:theCleanestString forKey:elementName];
 		}
+        if ([elementName isEqualToString:@"release"]){
+			NSLog(@"release is: %@",theCleanestString);
+		}
 		[aEvent setValue:tempString forKey:@"date"];
 	
 	[currentElementValue release];

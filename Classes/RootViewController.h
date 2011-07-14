@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PullToRefreshTableViewController.h"
 
 @class _7C3AppDelegate, EventDetailView,HelpView;
 
-@interface RootViewController : UITableViewController <UIAlertViewDelegate> {
+@interface RootViewController : PullToRefreshTableViewController <UIAlertViewDelegate> {
 	
 	_7C3AppDelegate *appDelegate;
 	EventDetailView *edvController;

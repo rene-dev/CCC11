@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.refreshHeaderView setLastRefreshDate:nil];
 		
 	self.firstDayArray = [NSMutableArray arrayWithCapacity:20];
 	self.secondDayArray = [NSMutableArray arrayWithCapacity:20];
@@ -315,6 +316,18 @@
 	[self.navigationController pushViewController:edvController animated:YES];
 }
 
+- (void)reloadTableViewDataSource{
+	//  should be calling your tableviews model to reload
+	//  put here just for demo
+    //NSURL *url = [[NSURL alloc] initWithString:@"http://events.ccc.de/camp/2011/Fahrplan/schedule.en.xml"];
+	[super performSelector:@selector(dataSourceDidFinishLoadingNewData) withObject:nil afterDelay:3.0];
+	
+}
+- (void)dataSourceDidFinishLoadingNewData{
+	[refreshHeaderView setCurrentDate];  //  should check if data reload was successful 
+	
+	[super dataSourceDidFinishLoadingNewData];
+}
 
 #pragma mark -
 #pragma mark Memory management

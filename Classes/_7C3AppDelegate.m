@@ -20,54 +20,28 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-	if([self connectedToNetwork] != NO){
-		NSURL *url = [[NSURL alloc] initWithString:@"http://events.ccc.de/camp/2011/Fahrplan/schedule.en.xml"];
-		NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
-	
-		//Initialize the delegate.
-		XMLParser *parser = [[XMLParser alloc] initXMLParser];
-	
-		//Set delegate
-		[xmlParser setDelegate:parser];
-	
-		//Start parsing the XML file.
-		BOOL success = [xmlParser parse];
-	
-		if(success)
-			NSLog(@"No Errors");
-		else
-			NSLog(@"Error Error Error!!!");
-		}
-		else {
-			NSString *urlAddress = [[NSBundle mainBundle] pathForResource:@"schedule.en" ofType:@"xml"];
-			NSURL *url = [NSURL fileURLWithPath:urlAddress];
-			NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
-			
-			//Initialize the delegate.
-			XMLParser *parser = [[XMLParser alloc] initXMLParser];
-			
-			//Set delegate
-			[xmlParser setDelegate:parser];
-			
-			//Start parsing the XML file.
-			BOOL success = [xmlParser parse];
-			
-			if(success)
-				NSLog(@"No Errors");
-			else
-				NSLog(@"Error Error Error!!!");
-			NSString *title = @"Warning!";
-			UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:title message:@"Using offline data." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-			[alertView show];
-			[alertView release];
-		}
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSString *urlAddress = [[NSBundle mainBundle] pathForResource:@"schedule.en" ofType:@"xml"];
+    NSURL *url = [NSURL fileURLWithPath:urlAddress];
+    NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
+    
+    //Initialize the delegate.
+    XMLParser *parser = [[XMLParser alloc] initXMLParser];
+    
+    //Set delegate
+    [xmlParser setDelegate:parser];
+    
+    //Start parsing the XML file.
+    if([xmlParser parse])
+        NSLog(@"No Errors");
+    else
+        NSLog(@"Error parsing xml");
 			
     // Add the navigation controller's view to the window and display.
     [self.window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];
 	
-	 application.applicationIconBadgeNumber = 0;
+    application.applicationIconBadgeNumber = 0;
 
     return YES;
 }

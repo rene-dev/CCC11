@@ -106,9 +106,15 @@
         if ([aEvent.date isEqualToString:@"2011-08-14"]){
 			[self.fifthDayArray addObject:aEvent];
 		}
-				
-		
 	}
+    //sort events by startdate
+    NSSortDescriptor *dateSorter = [[NSSortDescriptor alloc] initWithKey:@"start" ascending:YES];
+    [firstDayArray  sortUsingDescriptors:[NSArray arrayWithObject:dateSorter]];
+    [secondDayArray sortUsingDescriptors:[NSArray arrayWithObject:dateSorter]];
+    [thirdDayArray  sortUsingDescriptors:[NSArray arrayWithObject:dateSorter]];
+    [fourthDayArray sortUsingDescriptors:[NSArray arrayWithObject:dateSorter]];
+    [fifthDayArray  sortUsingDescriptors:[NSArray arrayWithObject:dateSorter]];
+    [dateSorter release];
 }
 
 - (IBAction)helpButtonPressed:(id)sender{

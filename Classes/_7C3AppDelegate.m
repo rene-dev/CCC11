@@ -36,7 +36,7 @@
         NSLog(@"No Errors");
     else
         NSLog(@"Error parsing xml");
-			
+    [parser release];
     // Add the navigation controller's view to the window and display.
     [self.window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];

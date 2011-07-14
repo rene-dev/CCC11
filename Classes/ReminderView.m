@@ -72,14 +72,16 @@
 		NSDateFormatter *df = [[NSDateFormatter alloc] init];
 		[df setDateFormat:@"yyyy-MM-dd HH:mm"];
 		NSDate *theDate = [df dateFromString: eventTimeString];
+        [df release];
 		//NSDate *pickerDate = [theDate dateByAddingTimeInterval:2700];
-		NSDate *pickerDate = [[[NSDate alloc] initWithTimeInterval:2700 sinceDate:theDate] autorelease];
+		NSDate *pickerDate = [[NSDate alloc] initWithTimeInterval:2700 sinceDate:theDate];
 		
 		// Break the date up into components
 		NSDateComponents *dateComponents = [calendar components:( NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit )
 													   fromDate:pickerDate];
 		NSDateComponents *timeComponents = [calendar components:( NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit )
 													   fromDate:pickerDate];
+        [pickerDate release];
 		// Set up the fire time
 		NSDateComponents *dateComps = [[NSDateComponents alloc] init];
 		[dateComps setDay:[dateComponents day]];

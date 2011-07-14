@@ -37,8 +37,7 @@
 	
 	titleLabel.text = aEvent.title;
 	subtitleLabel.text = aEvent.subtitle;
-	//abstractText.text = aEvent.abstract;
-    abstractText.text = aEvent.description;
+    abstractText.text = ([aEvent.abstract length] > [aEvent.description length]) ? aEvent.abstract : aEvent.description;
 	roomLabel.text = [@"Room: " stringByAppendingString:aEvent.room];
 	startLabel.text = [[@"Start: " stringByAppendingString:aEvent.start] stringByAppendingString:@"h"];
 	durationLabel.text = [[@"Duration: " stringByAppendingString:aEvent.duration] stringByAppendingString:@"h"];

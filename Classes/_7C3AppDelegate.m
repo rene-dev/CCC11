@@ -22,7 +22,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 	if([self connectedToNetwork] != NO){
-		NSURL *url = [[NSURL alloc] initWithString:@"http://events.ccc.de/congress/2010/Fahrplan/schedule.en.xml"];
+		NSURL *url = [[NSURL alloc] initWithString:@"http://events.ccc.de/camp/2011/Fahrplan/schedule.en.xml"];
 		NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
 	
 		//Initialize the delegate.
@@ -40,7 +40,7 @@
 			NSLog(@"Error Error Error!!!");
 		}
 		else {
-			NSString *urlAddress = [[NSBundle mainBundle] pathForResource:@"fahrplan" ofType:@"xml"];
+			NSString *urlAddress = [[NSBundle mainBundle] pathForResource:@"scedule.en" ofType:@"xml"];
 			NSURL *url = [NSURL fileURLWithPath:urlAddress];
 			NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
 			

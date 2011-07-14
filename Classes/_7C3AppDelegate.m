@@ -40,7 +40,7 @@
 			NSLog(@"Error Error Error!!!");
 		}
 		else {
-			NSString *urlAddress = [[NSBundle mainBundle] pathForResource:@"scedule.en" ofType:@"xml"];
+			NSString *urlAddress = [[NSBundle mainBundle] pathForResource:@"schedule.en" ofType:@"xml"];
 			NSURL *url = [NSURL fileURLWithPath:urlAddress];
 			NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
 			

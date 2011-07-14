@@ -102,7 +102,7 @@
 			if(wvController == nil)
 				wvController = [[WebView alloc] initWithNibName:@"WebView" bundle:[NSBundle mainBundle]];
 			
-			NSString *theUrl = @"http://events.ccc.de/congress/2010/Fahrplan/events/";
+			NSString *theUrl = @"http://events.ccc.de/camp/2011/Fahrplan/events/";
 			theUrl = [[theUrl stringByAppendingFormat:@"%i",aEvent.eventID] stringByAppendingString:@".en.html"];
 			
 			wvController.urlToOpen = theUrl;

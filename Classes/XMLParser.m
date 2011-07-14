@@ -94,6 +94,9 @@
 		if ([elementName isEqualToString:@"abstract"]){
 			[aEvent setValue:theCleanestString forKey:elementName];
 		}
+        if ([elementName isEqualToString:@"description"]){
+			[aEvent setValue:theCleanestString forKey:elementName];
+		}
 		if ([elementName isEqualToString:@"duration"]){
 			[aEvent setValue:theCleanestString forKey:elementName];
 		}

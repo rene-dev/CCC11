@@ -11,13 +11,14 @@
 
 @implementation Event
 
-@synthesize title, room, abstract, eventID, subtitle, start, duration,date,language,track;
+@synthesize title, room, abstract, description, eventID, subtitle, start, duration,date,language,track;
 
 
 
 - (void) dealloc {
 	
 	[abstract release];
+    [description release];
 	[subtitle release];
 	[start release];
 	[duration release];

@@ -14,7 +14,7 @@
 
 @implementation RootViewController
 
-@synthesize firstDayArray,secondDayArray,thirdDayArray,fourthDayArray;
+@synthesize firstDayArray,secondDayArray,thirdDayArray,fourthDayArray,fifthDayArray;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -27,6 +27,7 @@
 	self.secondDayArray = [NSMutableArray arrayWithCapacity:20];
 	self.thirdDayArray = [NSMutableArray arrayWithCapacity:20];
 	self.fourthDayArray = [NSMutableArray arrayWithCapacity:20];
+    self.fifthDayArray = [NSMutableArray arrayWithCapacity:20];
 	appDelegate = (_7C3AppDelegate *)[[UIApplication sharedApplication] delegate];
 	[self organizeTheData];
 	self.title = @"27C3";
@@ -102,7 +103,7 @@
 			[self.fourthDayArray addObject:aEvent];
 		}
         if ([aEvent.date isEqualToString:@"2011-08-14"]){
-			[self.fourthDayArray addObject:aEvent];
+			[self.fifthDayArray addObject:aEvent];
 		}
 				
 		
@@ -199,6 +200,9 @@
 		case 3:
 			return [self.fourthDayArray count];
 			break;
+		case 4:
+			return [self.fifthDayArray count];
+			break;
 	}
 	return 0;
 }
@@ -228,6 +232,9 @@
 			break;
 		case 3:
 			aEvent = [self.fourthDayArray objectAtIndex:indexPath.row];
+			break;
+		case 4:
+			aEvent = [self.fifthDayArray objectAtIndex:indexPath.row];
 			break;
 
 	}
@@ -297,6 +304,9 @@
 		case 3:
 			aEvent = [self.fourthDayArray objectAtIndex:indexPath.row];
 			break;
+		case 4:
+			aEvent = [self.fifthDayArray objectAtIndex:indexPath.row];
+			break;
 			
 	}
 	
@@ -327,6 +337,7 @@
 	[self.secondDayArray release];
 	[self.thirdDayArray release];
 	[self.fourthDayArray release];
+    [self.fifthDayArray release];
 	[appDelegate release];
     [super dealloc];
 }

@@ -89,16 +89,19 @@
 	for (int i = 0; i<[appDelegate.events count]; i++) {
 		Event *aEvent = [appDelegate.events objectAtIndex:i];
 	
-		if ([aEvent.date isEqualToString:@"2010-12-27"]){
+		if ([aEvent.date isEqualToString:@"2011-08-10"]){
 			[self.firstDayArray addObject:aEvent];
 		}
-		if ([aEvent.date isEqualToString:@"2010-12-28"]){
+		if ([aEvent.date isEqualToString:@"2011-08-11"]){
 			[self.secondDayArray addObject:aEvent];
 		}	
-		if ([aEvent.date isEqualToString:@"2010-12-29"]){
+		if ([aEvent.date isEqualToString:@"2011-08-12"]){
 			[self.thirdDayArray addObject:aEvent];
 		}		
-		if ([aEvent.date isEqualToString:@"2010-12-30"]){
+		if ([aEvent.date isEqualToString:@"2011-08-13"]){
+			[self.fourthDayArray addObject:aEvent];
+		}
+        if ([aEvent.date isEqualToString:@"2011-08-14"]){
 			[self.fourthDayArray addObject:aEvent];
 		}
 				

@@ -7,10 +7,6 @@
 //
 
 #import "RootViewController.h"
-#import "_7C3AppDelegate.h"
-#import "Event.h"
-#import "EventDetailView.h"
-#import "HelpView.h"
 
 @implementation RootViewController
 
@@ -125,6 +121,16 @@
 	
 	[self.navigationController pushViewController:hvController animated:YES];
 
+}
+
+- (IBAction)reminderButtonPressed:(id)sender{
+	
+	if(rmController == nil)
+		rmController = [[ReminderView alloc] initWithNibName:@"ReminderView" bundle:[NSBundle mainBundle]];
+    
+    rmController.aEvent = nil;
+	[self.navigationController pushViewController:rmController animated:YES];
+    
 }
 
 

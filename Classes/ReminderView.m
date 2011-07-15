@@ -32,7 +32,9 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-	[self setReminder];
+    if (aEvent != nil) {
+        [self setReminder];
+    }
 }
 
 /*

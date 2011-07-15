@@ -8,14 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import "PullToRefreshTableViewController.h"
+#import "_7C3AppDelegate.h"
+#import "Event.h"
+#import "EventDetailView.h"
+#import "HelpView.h"
+#import "ReminderView.h"
 
-@class _7C3AppDelegate, EventDetailView,HelpView;
+@class _7C3AppDelegate, EventDetailView,HelpView,ReminderView;
 
 @interface RootViewController : PullToRefreshTableViewController <UIAlertViewDelegate> {
 	
 	_7C3AppDelegate *appDelegate;
 	EventDetailView *edvController;
 	HelpView *hvController;
+    ReminderView *rmController;
 	
 	NSMutableArray *firstDayArray;
 	NSMutableArray *secondDayArray;
@@ -35,5 +41,6 @@
 
 -(void)organizeTheData;
 - (IBAction)helpButtonPressed:(id)sender;
+- (IBAction)reminderButtonPressed:(id)sender;
 
 @end

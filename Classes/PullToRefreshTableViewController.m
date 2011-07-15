@@ -142,7 +142,12 @@
 #pragma mark -
 #pragma mark ScrollView Callbacks
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{	
-	
+	if( refreshHeaderView.state == EGOOPullRefreshLoading ) {
+        if( scrollView.contentOffset.y >= 0 )
+            scrollView.contentInset = UIEdgeInsetsZero;
+        else
+            scrollView.contentInset = UIEdgeInsetsMake( MIN( -scrollView.contentOffset.y, 65.0f ), 0, 0, 0 );
+    }
 	if (scrollView.isDragging) {
 		if (refreshHeaderView.state == EGOOPullRefreshPulling && scrollView.contentOffset.y > -65.0f && scrollView.contentOffset.y < 0.0f && !_reloading) {
 			[refreshHeaderView setState:EGOOPullRefreshNormal];

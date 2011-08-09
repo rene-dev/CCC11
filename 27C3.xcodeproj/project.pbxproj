@@ -15,7 +15,6 @@
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
-		A78D3B9213CF485F00C07030 /* schedule.en.xml in Resources */ = {isa = PBXBuildFile; fileRef = A78D3B9113CF485F00C07030 /* schedule.en.xml */; };
 		A78D3BC413CF87A000C07030 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A78D3BC213CF879F00C07030 /* EGORefreshTableHeaderView.m */; };
 		A78D3BCE13CF88DB00C07030 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78D3BCD13CF88DB00C07030 /* QuartzCore.framework */; };
 		A78D3BD113CF892D00C07030 /* PullToRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78D3BCF13CF892C00C07030 /* PullToRefreshTableViewController.m */; };
@@ -23,6 +22,7 @@
 		A78D3BDF13CF8C1C00C07030 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A78D3BDB13CF8C1C00C07030 /* blueArrow.png */; };
 		A78D3BE013CF8C1C00C07030 /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A78D3BDC13CF8C1C00C07030 /* whiteArrow.png */; };
 		A78D3BE113CF8C1C00C07030 /* blueArrow_new.png in Resources */ = {isa = PBXBuildFile; fileRef = A78D3BDD13CF8C1C00C07030 /* blueArrow_new.png */; };
+		A7A7468B13F1F40D000C2BD9 /* schedule.en.xml in Resources */ = {isa = PBXBuildFile; fileRef = A7A7468A13F1F40D000C2BD9 /* schedule.en.xml */; };
 		B407DD9112B1327200B9E906 /* community.png in Resources */ = {isa = PBXBuildFile; fileRef = B407DD9012B1327200B9E906 /* community.png */; };
 		B407DD9E12B1334C00B9E906 /* culture.png in Resources */ = {isa = PBXBuildFile; fileRef = B407DD9912B1334C00B9E906 /* culture.png */; };
 		B407DD9F12B1334C00B9E906 /* hacking.png in Resources */ = {isa = PBXBuildFile; fileRef = B407DD9A12B1334C00B9E906 /* hacking.png */; };
@@ -60,7 +60,6 @@
 		28F335F01007B36200424DE2 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* _7C3-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "_7C3-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		A78D3B9113CF485F00C07030 /* schedule.en.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = schedule.en.xml; sourceTree = "<group>"; };
 		A78D3BC213CF879F00C07030 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
 		A78D3BC313CF87A000C07030 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
 		A78D3BCD13CF88DB00C07030 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -70,6 +69,7 @@
 		A78D3BDB13CF8C1C00C07030 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
 		A78D3BDC13CF8C1C00C07030 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
 		A78D3BDD13CF8C1C00C07030 /* blueArrow_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow_new.png; sourceTree = "<group>"; };
+		A7A7468A13F1F40D000C2BD9 /* schedule.en.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = schedule.en.xml; sourceTree = "<group>"; };
 		B407DD9012B1327200B9E906 /* community.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = community.png; sourceTree = "<group>"; };
 		B407DD9912B1334C00B9E906 /* culture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = culture.png; sourceTree = "<group>"; };
 		B407DD9A12B1334C00B9E906 /* hacking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hacking.png; sourceTree = "<group>"; };
@@ -175,9 +175,9 @@
 			children = (
 				A78D3BDA13CF8C1B00C07030 /* blackArrow.png */,
 				A78D3BDB13CF8C1C00C07030 /* blueArrow.png */,
+				A7A7468A13F1F40D000C2BD9 /* schedule.en.xml */,
 				A78D3BDC13CF8C1C00C07030 /* whiteArrow.png */,
 				A78D3BDD13CF8C1C00C07030 /* blueArrow_new.png */,
-				A78D3B9113CF485F00C07030 /* schedule.en.xml */,
 				B4A8419012BB2ADC00C80FF6 /* scifi.caf */,
 				B407DD9912B1334C00B9E906 /* culture.png */,
 				B407DD9A12B1334C00B9E906 /* hacking.png */,
@@ -281,11 +281,11 @@
 				B407DDA212B1334C00B9E906 /* society.png in Resources */,
 				B407DDD412B136CF00B9E906 /* HelpView.xib in Resources */,
 				B4A8419112BB2ADC00C80FF6 /* scifi.caf in Resources */,
-				A78D3B9213CF485F00C07030 /* schedule.en.xml in Resources */,
 				A78D3BDE13CF8C1C00C07030 /* blackArrow.png in Resources */,
 				A78D3BDF13CF8C1C00C07030 /* blueArrow.png in Resources */,
 				A78D3BE013CF8C1C00C07030 /* whiteArrow.png in Resources */,
 				A78D3BE113CF8C1C00C07030 /* blueArrow_new.png in Resources */,
+				A7A7468B13F1F40D000C2BD9 /* schedule.en.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,13 +348,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Philip Brechler";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rene Hopf (C4PTULS2JF)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7A769896-EF41-443E-AC3E-51B22F174A00";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BC4B07F9-5FE6-42B2-84B0-C9F7E943F544";
 				SDKROOT = iphoneos;
 			};
 			name = AppStore;
@@ -391,12 +391,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rene Hopf (C4PTULS2JF)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BC4B07F9-5FE6-42B2-84B0-C9F7E943F544";
 				SDKROOT = iphoneos;
 			};
 			name = Release;

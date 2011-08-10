@@ -324,7 +324,7 @@
 				GCC_PREFIX_HEADER = _7C3_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "_7C3-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = 27C3;
 			};
 			name = Debug;
@@ -338,7 +338,7 @@
 				GCC_PREFIX_HEADER = _7C3_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "_7C3-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = 27C3;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -368,7 +368,7 @@
 				GCC_PREFIX_HEADER = _7C3_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "_7C3-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = 27C3;
 				VALIDATE_PRODUCT = YES;
 			};

@@ -57,7 +57,20 @@
 
 -(void)setReminder{
 	NSString *title = @"Add Reminder?";
-	UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:title message:@"Do you want to add a 15 minutes reminder for this event?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes",nil];
+    NSString *eventTimeString = [[aEvent.date stringByAppendingString:@" "]stringByAppendingString:aEvent.start];
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"yyyy-MM-dd HH:mm"];
+    NSDate *theDate = [df dateFromString: eventTimeString];
+    NSDate *pickerDate = [[NSDate alloc] initWithTimeInterval:2700 sinceDate:theDate];
+    UIAlertView* alertView = [UIAlertView alloc];
+    if([pickerDate timeIntervalSinceNow] > 0){
+        alertView = [alertView initWithTitle:title message:@"Do you want to add a 15 minutes reminder for this event?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes",nil];
+    }
+    else{
+        alertView = [alertView initWithTitle:title message:@"Event already started" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil,nil];
+    }
+    [alertView show];
+    [df release];
 	[alertView show];
 	[alertView release];
 	 
@@ -105,7 +118,8 @@
 		localNotif.alertAction = @"View";
 		
 		// Notification details
-		localNotif.alertBody = [[@"Event #" stringByAppendingFormat:@"%i",aEvent.eventID]stringByAppendingString:@" will beginn in 15 minutes"];
+        NSLog(@"%@",aEvent.title);
+		localNotif.alertBody = [aEvent.title stringByAppendingString:@" will beginn in 15 minutes"];
 		// Set the action button
 		
 		localNotif.soundName = @"scifi.caf";
